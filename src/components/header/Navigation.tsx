@@ -1,12 +1,12 @@
-import React from "react";
+import { useAppContext } from "../../context/AppContext";
 
-import { NavigationProps } from "../../typeAliases";
-
-const Navigation: React.FC<NavigationProps> = ({ navigationItems }) => {
+const Navigation = () => {
+	const { globalContent } = useAppContext();
+	const { navigation } = globalContent;
 	return (
 		<nav>
 			<ul>
-				{navigationItems?.map((elm) => (
+				{navigation?.map((elm) => (
 					<li key={elm.id}>
 						<a href={elm.slug}>
 							{elm.text}

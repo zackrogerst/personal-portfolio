@@ -1,0 +1,30 @@
+.hero {
+	/* background-image: var(--background-gradient); */
+	background-image: url("../../assets/background.svg");
+	background-size: cover;
+	background-attachment: fixed;
+
+	min-height: 100vh;
+	display: flex;
+	align-items: end;
+}
+
+.hero-column {
+	padding: var(--small-space);
+	max-width: 66%;
+	z-index: 2;
+}
+
+.cursor-blob {
+	z-index: -999;
+	position: absolute;
+	width: 600px;
+	height: 600px;
+	border-radius: 50%;
+	background: linear-gradient(149deg, rgba(255, 91, 0, 1) 0%, rgba(0, 110, 255, 1) 100%);
+	filter: blur(200px);
+
+	pointer-events: none;
+	transition: transform 4s;
+	transform: translate(-50%, -50%);
+}

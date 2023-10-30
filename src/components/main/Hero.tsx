@@ -1,14 +1,22 @@
+import "./Hero.css";
+
 import { useAppContext } from "../../context/AppContext";
 import Globe from "./Globe";
+import CursorBlob from "./CursorBlob";
 
 const Hero = () => {
 	const { homepageContent } = useAppContext();
 
 	return (
-		<div>
-			<Globe />
-			<h1>{homepageContent?.hero?.h1}</h1>
-		</div>
+		<>
+			<div className="hero">
+				<div className="hero-column">
+					<Globe />
+					<h1>{homepageContent?.hero?.h1}</h1>
+				</div>
+			</div>
+			<CursorBlob />
+		</>
 	);
 };
 

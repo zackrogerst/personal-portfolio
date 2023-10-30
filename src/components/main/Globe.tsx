@@ -1,4 +1,5 @@
 const Globe = () => {
+	const strokeColor = "#757575";
 	return (
 		<div id="globe">
 			<svg
@@ -15,11 +16,18 @@ const Globe = () => {
 						cy="50"
 						r="43"
 						fill="rgba(0, 0, 0, 0)"
-						stroke="#333"
+						stroke={strokeColor}
 						strokeWidth="3"
 					></circle>
-					<path d="M7 50 L93 50" stroke="#333" strokeWidth="3"></path>
-					<ellipse cx="50" cy="50" ry="43" fill="none" stroke="#333" strokeWidth="3">
+					<path d="M7 50 L93 50" stroke={strokeColor} strokeWidth="3"></path>
+					<ellipse
+						cx="50"
+						cy="50"
+						ry="43"
+						fill="none"
+						stroke={strokeColor}
+						strokeWidth="3"
+					>
 						<animate
 							attributeName="rx"
 							repeatCount="indefinite"
@@ -29,7 +37,14 @@ const Globe = () => {
 							begin="0s"
 						></animate>
 					</ellipse>
-					<ellipse cx="50" cy="50" ry="43" fill="none" stroke="#333" strokeWidth="3">
+					<ellipse
+						cx="50"
+						cy="50"
+						ry="43"
+						fill="none"
+						stroke={strokeColor}
+						strokeWidth="3"
+					>
 						<animate
 							attributeName="rx"
 							repeatCount="indefinite"
@@ -39,7 +54,14 @@ const Globe = () => {
 							begin="-1.4478260869565218s"
 						></animate>
 					</ellipse>
-					<ellipse cx="50" cy="50" ry="43" fill="none" stroke="#333" strokeWidth="3">
+					<ellipse
+						cx="50"
+						cy="50"
+						ry="43"
+						fill="none"
+						stroke={strokeColor}
+						strokeWidth="3"
+					>
 						<animate
 							attributeName="rx"
 							repeatCount="indefinite"

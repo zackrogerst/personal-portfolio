@@ -125,6 +125,17 @@ table {
 
 /* ----- END RESET CSS ----- */
 
+* {
+	box-sizing: border-box;
+	line-height: 1;
+	color: var(--off-black-color);
+}
+
 html {
 	font-family: var(--global-font);
+}
+
+h1 {
+	font-size: var(--medium-font-size);
+	text-transform: uppercase;
 }

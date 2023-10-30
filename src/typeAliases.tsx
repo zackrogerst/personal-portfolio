@@ -18,3 +18,11 @@ export type HeaderProps = {
 export type NavigationProps = {
 	navigationItems: NavigationItem[];
 };
+
+export type HomepageProps = {
+	homepageContent: {
+		hero: {
+			h1: string;
+		};
+	};
+};

@@ -6,12 +6,13 @@ import globalContent from "./content/global.json";
 import homepageContent from "./content/homepage.json";
 
 import Header from "./components/header/Header";
+import Hero from "./components/main/Hero";
 
 function App() {
 	return (
 		<>
 			<Header globalContent={globalContent} />
-			<h1>{homepageContent?.hero?.h1}</h1>
+			<Hero homepageContent={homepageContent}/>
 		</>
 	);
 }

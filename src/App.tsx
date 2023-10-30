@@ -7,13 +7,14 @@ import homepageContent from "./content/homepage.json";
 
 import Header from "./components/header/Header";
 import Hero from "./components/main/Hero";
+import { AppContextProvider } from "./context/AppContext";
 
 function App() {
 	return (
-		<>
-			<Header globalContent={globalContent} />
-			<Hero homepageContent={homepageContent}/>
-		</>
+		<AppContextProvider value={{ globalContent, homepageContent }}>
+			<Header />
+			<Hero />
+		</AppContextProvider>
 	);
 }
 

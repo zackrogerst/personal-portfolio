@@ -1,10 +1,9 @@
-import React from "react";
-
-import { HeaderProps } from "../../typeAliases";
-
 import Navigation from "./Navigation";
+import { useAppContext } from "../../context/AppContext";
 
-const Header: React.FC<HeaderProps> = ({ globalContent }) => {
+const Header = () => {
+	const { globalContent } = useAppContext();
+
 	const { logo, logoType, logoAltText, navigation } = globalContent;
 	return (
 		<header>

@@ -1,11 +1,19 @@
 {
-    "logo-text": "Zack Rogers",
-    "navigation": [
+	"logoText": "Zack Rogers",
+	"navigation": [
+		{
+			"id": 1,
+			"text": "My Work",
+			"slug": "#my-work",
+			"style": "primary",
+			"parent": false
+		},
         {
-            "label": "My Work",
-            "slug": "#my-work",
-            "style": "primary",
-            "parent": null
-        }
-    ]
+			"id": 2,
+			"text": "About Me",
+			"slug": "#about-me",
+			"style": "primary",
+			"parent": false
+		}
+	]
 }

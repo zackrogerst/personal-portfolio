@@ -3,6 +3,7 @@ import { useAppContext } from "../../context/AppContext";
 const Navigation = () => {
 	const { globalContent } = useAppContext();
 	const { navigation } = globalContent;
+	
 	return (
 		<nav>
 			<ul>

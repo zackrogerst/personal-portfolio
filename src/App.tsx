@@ -1,5 +1,4 @@
 import "./styles/styles.css";
-import "./styles/reset.css";
 import "./styles/global-variables.css";
 
 import globalContent from "./content/global.json";

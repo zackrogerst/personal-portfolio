@@ -1,5 +1,7 @@
 {
-	"logoText": "Zack Rogers",
+	"logo": "Zack Rogers",
+	"logoType": "str",
+	"logoAltText": "",
 	"navigation": [
 		{
 			"id": 1,
@@ -8,7 +10,7 @@
 			"style": "primary",
 			"parent": false
 		},
-        {
+		{
 			"id": 2,
 			"text": "About Me",
 			"slug": "#about-me",

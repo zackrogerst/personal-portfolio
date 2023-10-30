@@ -1,0 +1,11 @@
+{
+    "logo-text": "Zack Rogers",
+    "navigation": [
+        {
+            "label": "My Work",
+            "slug": "#my-work",
+            "style": "primary",
+            "parent": null
+        }
+    ]
+}

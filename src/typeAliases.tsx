@@ -1,10 +1,3 @@
-export type GlobalContent = {
-	logo: string;
-	logoType: string;
-	logoAltText: string;
-	navigation: NavigationItem[];
-};
-
 export type NavigationItem = {
 	id: number;
 	text: string;
@@ -14,7 +7,12 @@ export type NavigationItem = {
 };
 
 export type HeaderProps = {
-	globalContent: GlobalContent;
+	globalContent: {
+		logo: string;
+		logoType: string;
+		logoAltText: string;
+		navigation: NavigationItem[];
+	};
 };
 
 export type NavigationProps = {

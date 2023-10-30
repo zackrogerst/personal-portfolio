@@ -14,6 +14,12 @@ function App() {
 		<AppContextProvider value={{ globalContent, homepageContent }}>
 			<Header />
 			<Hero />
+			{
+				// my work
+				// about me
+				// contact
+				// footer
+			}
 		</AppContextProvider>
 	);
 }

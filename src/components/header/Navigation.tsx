@@ -11,7 +11,7 @@ const Navigation = () => {
 					<li key={elm.id}>
 						<a href={elm.slug}>
 							{elm.text}
-							{elm.parent ? "↓" : ""}
+							{elm.parent && "↓"}
 						</a>
 					</li>
 				))}

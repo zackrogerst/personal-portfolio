@@ -22,14 +22,13 @@ const CursorBlob = () => {
 		document.body.onpointermove = handlePointerMove;
 
 		return () => {
-			document.body.onpointermove = null; // Clean up the event handler when the component unmounts
+			document.body.onpointermove = null;
 		};
 	}, []);
 
 	return (
 		<>
 			<div id="blob"></div>
-			{/* <div id="blob-blur"></div> */}
 		</>
 	);
 };

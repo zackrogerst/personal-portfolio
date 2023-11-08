@@ -1,10 +1,11 @@
 import { createContext, ReactNode, useContext } from "react";
 
-import { HomepageContent, GlobalContent } from "../typeAliases";
+import { HomepageContent, GlobalContent, MyWorkContent } from "../typeAliases";
 
 type AppContextType = {
 	globalContent: GlobalContent;
 	homepageContent: HomepageContent;
+	myWorkContent: MyWorkContent;
 };
 
 const AppContext = createContext<AppContextType | undefined>(undefined);

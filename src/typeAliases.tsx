@@ -18,3 +18,9 @@ export type HomepageContent = {
 		h1: string;
 	};
 };
+
+export type MyWorkContent = {
+	githubOwner: string;
+	githubTopic: string;
+	perPageLimit: number;
+};

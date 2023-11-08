@@ -60,7 +60,6 @@ function MyWork() {
 	};
 
 	const fetchProjects = async () => {
-		console.log("%c running fetchProjects", "color: yellow;");
 		try {
 			const apiUrl = `https://api.github.com/search/repositories?q=user:${githubOwner}+topic:${githubTopic}&per_page=${perPageLimit}`;
 			const response = await axios.get(apiUrl);
@@ -88,12 +87,13 @@ function MyWork() {
 	}, []);
 
 	return (
-		<>
+		<div className="my-projects-row">
+			<h2>My Projects</h2>
 			{loading ? (
 				<p>loading...</p>
 			) : (
-				<div>
-					{Object.keys(projects).length !== 0 &&
+				<div className="project-cards-container">
+					{projects.total_count > 0 ? (
 						projects?.items?.map((project) => {
 							const { id, name, html_url, description, language, topics, readme } =
 								project;
@@ -118,10 +118,13 @@ function MyWork() {
 									/>
 								</div>
 							);
-						})}
+						})
+					) : (
+						<p>No Projects to Display</p>
+					)}
 				</div>
 			)}
-		</>
+		</div>
 	);
 }
 

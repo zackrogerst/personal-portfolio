@@ -1,8 +1,8 @@
 import "./Hero.css";
 
-import { useAppContext } from "../../context/AppContext";
+import { useAppContext } from "../../../context/AppContext";
 import Globe from "./Globe";
-import CursorBlob from "./CursorBlob";
+import CursorBlob from "../CursorBlob/CursorBlob";
 
 const Hero = () => {
 	const { homepageContent } = useAppContext();

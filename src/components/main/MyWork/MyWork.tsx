@@ -4,9 +4,9 @@ import axios from "axios";
 import { marked } from "marked";
 import DOMPurify from "dompurify";
 
-import { useAppContext } from "../../context/AppContext";
+import { useAppContext } from "../../../context/AppContext";
 
-import { ApiResponse } from "../../githubTypeAliases";
+import { ApiResponse } from "../../../typeAliases/githubTypeAliases";
 
 function MyWork() {
 	const { myWorkContent } = useAppContext();

@@ -6,9 +6,9 @@ import homepageContent from "./content/homepage.json";
 import myWorkContent from "./content/myWork.json";
 
 import Header from "./components/header/Header";
-import Hero from "./components/main/Hero";
+import Hero from "./components/main/Hero/Hero";
 import { AppContextProvider } from "./context/AppContext";
-import MyWork from "./components/main/MyWork";
+import MyWork from "./components/main/MyWork/MyWork";
 
 function App() {
 	return (

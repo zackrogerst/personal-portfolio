@@ -1,6 +1,6 @@
 .hero {
 	/* background-image: var(--background-gradient); */
-	background-image: url("../../assets/background.svg");
+	background-image: url("../../../assets/background.svg");
 	background-size: cover;
 	background-attachment: fixed;
 

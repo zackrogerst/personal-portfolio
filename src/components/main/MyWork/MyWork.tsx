@@ -71,6 +71,7 @@ function MyWork() {
 					repo.readme = await fetchReadme(readmeUrl);
 				}
 				setProjects(data);
+				setLoading(false);
 			} else {
 				console.error("No repositories found.");
 			}
@@ -83,7 +84,6 @@ function MyWork() {
 	useEffect(() => {
 		setLoading(true);
 		fetchProjects();
-		setLoading(false);
 	}, []);
 
 	return (

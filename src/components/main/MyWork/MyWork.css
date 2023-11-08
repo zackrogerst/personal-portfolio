@@ -1,0 +1,9 @@
+.project-cards-container {
+	display: flex;
+	gap: var(--tiny-space);
+}
+
+.project-card {
+	padding: var(--tiny-space);
+	border: 1px solid var(--off-black-color);
+}

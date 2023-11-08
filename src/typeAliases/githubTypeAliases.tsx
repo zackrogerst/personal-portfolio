@@ -3,6 +3,7 @@ export type Repository = {
 	name: string;
 	html_url: string;
 	description: string;
+	homepage: string;
 	language: string;
 	topics: string[];
 	readme: string;

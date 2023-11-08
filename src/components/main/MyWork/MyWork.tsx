@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import "./MyWork.css";
+
 import axios from "axios";
 import { marked } from "marked";
 import DOMPurify from "dompurify";
@@ -52,6 +54,7 @@ function MyWork() {
 				name: repo.name,
 				html_url: repo.html_url,
 				description: repo.description,
+				homepage: repo.homepage,
 				language: repo.language,
 				topics: repo.topics,
 				readme: ""
@@ -72,6 +75,7 @@ function MyWork() {
 				}
 				setProjects(data);
 				setLoading(false);
+				console.log(data);
 			} else {
 				console.error("No repositories found.");
 			}
@@ -95,27 +99,48 @@ function MyWork() {
 				<div className="project-cards-container">
 					{projects.total_count > 0 ? (
 						projects?.items?.map((project) => {
-							const { id, name, html_url, description, language, topics, readme } =
-								project;
+							const {
+								id,
+								name,
+								html_url,
+								description,
+								homepage,
+								language,
+								topics,
+								readme
+							} = project;
 							return (
 								<div key={id} className="project-card">
-									<h2>{name}</h2>
-									<p>{description}</p>
-									<p>{language}</p>
-									<div>
-										<h3>Topics:</h3>
-										<ul>
-											{topics?.map((topic) => (
-												<li key={topic}>{topic}</li>
-											))}
-										</ul>
-									</div>
-									<a href={html_url}>See On Github</a>
-									<div
-										dangerouslySetInnerHTML={sanitizeHTML(
-											markdownToHTML(readme)
-										)}
-									/>
+									{name !== "" && <h2>{name}</h2>}
+									{description !== "" && <p>{description}</p>}
+									{language !== "" && <p>{language}</p>}
+									{homepage !== "" && (
+										<a href={homepage} target="_blank">
+											Check out the Homepage
+										</a>
+									)}
+									{topics[0] !== "" && (
+										<div>
+											<h3>Topics:</h3>
+											<ul>
+												{topics?.map((topic) => (
+													<li key={topic}>{topic}</li>
+												))}
+											</ul>
+										</div>
+									)}
+									{html_url !== "" && (
+										<a href={html_url} target="_blank">
+											See On Github
+										</a>
+									)}
+									{readme !== "" && (
+										<div
+											dangerouslySetInnerHTML={sanitizeHTML(
+												markdownToHTML(readme)
+											)}
+										/>
+									)}
 								</div>
 							);
 						})
